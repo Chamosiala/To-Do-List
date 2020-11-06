@@ -60,7 +60,6 @@ while running:
 
     elif choice == '4':
         print("\nMissed tasks:")
-#        rows = session.query(Table).filter(Table.deadline < today.date()).all()
         rows = session.query(Table).order_by(Table.deadline).filter(Table.deadline < today.date()).all()
         if rows:
             for row in rows:
